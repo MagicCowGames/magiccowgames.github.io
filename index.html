@@ -486,18 +486,36 @@
 					</center>
 				</div>
 				
-				<div class="dra_margin">
-					<h1>Imágenes</h1>
-					<div class="dra_margin dra_text_justify">
-					<p>
-					<b>Wizard’s Death Wish</b> es un videojuego competitivo arcade con gran nivel de rejugabilidad y entretenimiento, con elementos de fantasía medieval, con un fuerte énfasis en el uso de la magia y con un sistema de magia elemental que permite al usuario realizar conjuros creados dinámicamente en tiempo real (“<b>dynamic spellcasting</b>”).
-					</p>
-					<p>
-					En <b>Wizard’s Death Wish</b>, tomarás el papel de un poderoso mago despiadado el cuál ha sido despojado de su magia por sus atroces crímenes contra la humanidad. Para evitar que abuses de tus poderes, has sido castigado por una orden de magos santurrones y has sido encerrado en <b>La Torre</b>, una prisión para todos los malvados hechiceros del mundo, como tú.
-					</p>
-					<p>
-					Embárcate en una misión para recuperar tus poderes y vengarte de aquellos que osaron oponerse a tu poder, navegando múltiples niveles repletos de diferentes tipos de enemigos, puzzles y retos hasta recuperar todos tu poderes y alcanzar el nivel más alto de La Torre para poder escapar y dominar el mundo.
-					</p>
+				<div class="container">
+					<h3 class="section-title mb-5 text-center">Imágenes</h3>
+					<h6 class="section-subtitle text-center"></h6>
+
+					<div class="row">
+					
+						<script>
+							
+							function makeImageDisplay(str = "./assets/imgs/spells.png") {
+								let ans = "<img src=\"" + str + "\" width=\"30%\" class=\"card dra_image_container2\">";
+								return ans;
+							}
+							
+							function makeImageDisplayArray(imagesToDisplay) {
+								for(let i = 0; i < imagesToDisplay.length; i+=1) {
+									document.write(makeImageDisplay(imagesToDisplay[i]));
+								}
+							}
+							
+							var imagesToDisplay = [
+								"./assets/imgs/spells.png",
+								"./assets/imgs/spells.png",
+								"./assets/imgs/spells.png",
+								"./assets/imgs/spells.png",
+								"./assets/imgs/spells.png",
+							];
+							
+							makeImageDisplayArray(imagesToDisplay);
+							
+						</script>
 					</div>
 				</div>
 				
