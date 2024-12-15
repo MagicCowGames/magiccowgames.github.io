@@ -505,6 +505,15 @@
 								}
 							}
 							
+							function shuffleArray(arr) {
+								for(let i = 0; i < arr.length; i+=1) {
+									let r = Math.floor(Math.random() * arr.length);
+									let temp = arr[i];
+									arr[i] = arr[r];
+									arr[r] = temp;
+								}
+							}
+							
 							var imagesToDisplay = [
 								"./assets/imgs/album/01.png",
 								"./assets/imgs/album/02.png",
@@ -513,7 +522,9 @@
 								"./assets/imgs/album/05.png",
 								"./assets/imgs/album/06.png",
 								"./assets/imgs/album/07.png",
+								"./assets/imgs/album/08.png",
 							];
+							shuffleArray(imagesToDisplay);
 							
 							makeImageDisplayArray(imagesToDisplay);
 							
