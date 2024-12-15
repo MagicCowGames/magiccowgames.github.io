@@ -500,9 +500,12 @@
 							}
 							
 							function makeImageDisplayArray(imagesToDisplay) {
+								let str = "<div class=\"row\">";
 								for(let i = 0; i < imagesToDisplay.length; i+=1) {
-									document.write(makeImageDisplay(imagesToDisplay[i]));
+									str += makeImageDisplay(imagesToDisplay[i]);
 								}
+								str += "</div>";
+								document.write(str);
 							}
 							
 							function shuffleArray(arr) {
@@ -514,7 +517,7 @@
 								}
 							}
 							
-							var imagesToDisplay = [
+							var imagesA = [
 								"./assets/imgs/album/01.png",
 								"./assets/imgs/album/02.png",
 								"./assets/imgs/album/03.png",
@@ -524,9 +527,38 @@
 								"./assets/imgs/album/07.png",
 								"./assets/imgs/album/08.png",
 							];
-							shuffleArray(imagesToDisplay);
+							var imagesB = [
+								"./assets/imgs/album/m0.png",
+								"./assets/imgs/album/m1.png",
+								"./assets/imgs/album/m2.png",
+								"./assets/imgs/album/m3.png",
+							];
+							var imagesC = [
+								"./assets/imgs/album/s0.png",
+								"./assets/imgs/album/s1.png",
+								"./assets/imgs/album/s2.png",
+								"./assets/imgs/album/s3.png",
+								"./assets/imgs/album/s4.png",
+								"./assets/imgs/album/s5.png",
+								"./assets/imgs/album/s6.png",
+								"./assets/imgs/album/s7.png",
+								"./assets/imgs/album/s8.png",
+								"./assets/imgs/album/s9.png",
+								"./assets/imgs/album/s10.png",
+								"./assets/imgs/album/s11.png",
+								"./assets/imgs/album/s12.png",
+								"./assets/imgs/album/s13.png",
+								"./assets/imgs/album/s14.png",
+								"./assets/imgs/album/s15.png",
+							];
 							
-							makeImageDisplayArray(imagesToDisplay);
+							shuffleArray(imagesA);
+							shuffleArray(imagesB);
+							shuffleArray(imagesC);
+							
+							makeImageDisplayArray(imagesA);
+							makeImageDisplayArray(imagesB);
+							makeImageDisplayArray(imagesC);
 							
 						</script>
 					</div>
