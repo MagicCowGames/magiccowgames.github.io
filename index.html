@@ -352,6 +352,7 @@
             <h1 class="section-title mb-5 text-center">Juegos</h1>
             <h6 class="section-subtitle text-center"></h6>
 			
+			
 			<!-- Las Fotos de caras -->
 			
 			<center> <!-- This is a hack... too bad! -->
@@ -360,23 +361,82 @@
 				<img src="./assets/imgs/WDWTitle.png" width="100%">
 			</div>
 			<div class="dra_objects_padding">
+				<!-- foto -->
 				<a href="https://magiccowgames.itch.io/" target="_blank" class="dra_a">
 					<div class="dra_image_container">
 						<img src="./assets/imgs/background.png">
-						<h1>Juega a Wizard's Death Wish</h1>
-						<div class="dra_margin dra_text_justify">
-						<p>
-						<b>Wizard’s Death Wish</b> es un videojuego competitivo arcade con gran nivel de rejugabilidad y entretenimiento, con elementos de fantasía medieval, con un fuerte énfasis en el uso de la magia y con un sistema de magia elemental que permite al usuario realizar conjuros creados dinámicamente en tiempo real (“<b>dynamic spellcasting</b>”).
-						</p>
-						<p>
-						En <b>Wizard’s Death Wish</b>, tomarás el papel de un poderoso mago despiadado el cuál ha sido despojado de su magia por sus atroces crímenes contra la humanidad. Para evitar que abuses de tus poderes, has sido castigado por una orden de magos santurrones y has sido encerrado en <b>La Torre</b>, una prisión para todos los malvados hechiceros del mundo, como tú.
-						</p>
-						<p>
-						Embárcate en una misión para recuperar tus poderes y vengarte de aquellos que osaron oponerse a tu poder, navegando múltiples niveles repletos de diferentes tipos de enemigos, puzzles y retos hasta recuperar todos tu poderes y alcanzar el nivel más alto de La Torre para poder escapar y dominar el mundo.
-						</p>
-						</div>
 					</div>
 				</a>
+				
+				<!-- Juega a wdw -->
+				<div class="dra_margin">
+					<h1>Juega a Wizard's Death Wish</h1>
+					<div class="dra_margin dra_text_justify">
+					<p>
+					<b>Wizard’s Death Wish</b> es un videojuego competitivo arcade con gran nivel de rejugabilidad y entretenimiento, con elementos de fantasía medieval, con un fuerte énfasis en el uso de la magia y con un sistema de magia elemental que permite al usuario realizar conjuros creados dinámicamente en tiempo real (“<b>dynamic spellcasting</b>”).
+					</p>
+					<p>
+					En <b>Wizard’s Death Wish</b>, tomarás el papel de un poderoso mago despiadado el cuál ha sido despojado de su magia por sus atroces crímenes contra la humanidad. Para evitar que abuses de tus poderes, has sido castigado por una orden de magos santurrones y has sido encerrado en <b>La Torre</b>, una prisión para todos los malvados hechiceros del mundo, como tú.
+					</p>
+					<p>
+					Embárcate en una misión para recuperar tus poderes y vengarte de aquellos que osaron oponerse a tu poder, navegando múltiples niveles repletos de diferentes tipos de enemigos, puzzles y retos hasta recuperar todos tu poderes y alcanzar el nivel más alto de La Torre para poder escapar y dominar el mundo.
+					</p>
+					</div>
+				</div>
+				
+				<!-- Características -->
+				<div class="container">
+					<h3 class="section-title mb-5 text-center">Características</h3>
+					<h6 class="section-subtitle text-center"></h6>
+
+					<div class="row">
+						<script>
+							
+							<!-- This is a fucking hack! too bad! -->
+							var str0 = '<p class="dra_a" href="';
+							var str01 = '" target="_blank">';
+							var strend = "</p>";
+							
+							var strbase = '<div class="col-md-4 my-3 my-md-0">';
+							var strbasend = '</div>';
+							
+							var str1 = '<div class="card dra_image_container2">' +
+									'<div class="card-body">' +
+										'<div class="media align-items-center mb-3">' +
+											'<img class="mr-3" src="';
+							
+							var str1p2 = '"alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">' +
+											'<div class="media-body">' +
+												'<h6 class="mt-1 mb-0">';
+							var str2 = '</h6>' +
+												'<small class="text-muted mb-0">';
+							
+							var str3 = '</small>' +
+											'</div>'+
+										'</div>'+
+										'<p class="mb-0"></p>'+
+									'</div>'+
+								'</div>';
+							
+							var rrss = [
+								{name: "Uso de Magia", img: "./assets/imgs/magic.png", url : ""},
+								{name: "Conjuros Dinámicos", img: "./assets/imgs/spells.png", url: ""},
+								{name: "Rejugabilidad", img: "./assets/imgs/replay.png", url: ""},
+								{name: "Exploración", img : "./assets/imgs/exploracion.png", url: ""},
+								{name: "Competitividad", img : "./assets/imgs/competitividad.png", url: ""},
+								{name: "Habilidad", img : "./assets/imgs/skills.png", url: ""},
+								{name: "Ambientación", img : "./assets/imgs/ambientacion.png", url: ""},
+								{name: "Diseño Artístico", img : "./assets/imgs/art.png", url: ""},
+								{name: "Personalización", img : "./assets/imgs/customization.png", url: ""}
+							];
+							
+							for(let i = 0; i < rrss.length; i+=1)
+							{
+								document.write(strbase + str0 + rrss[i].url + str01 + str1 + rrss[i].img + str1p2 + rrss[i].name + str2 + str3 + strend + strbasend);
+							}
+						</script>
+					</div>
+				</div>
 			</div>
 			</center>
 			
@@ -401,8 +461,8 @@
 			
 			<div class="col-md-4 my-3">
                     <div class="team-wrapper text-center">
-                        <img src="assets/imgs/wizard.png" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
-                        <h5 class="my-3">Daniel</h5>
+                        <img src="assets/imgs/wizard2.png" class="circle-120 rounded-circle mb-3 shadow" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, Pigga Landing page">
+                        <h5 class="my-3">Daniel Rodríguez Ariza</h5>
                         <p>Programador, game designer y technical artist de Magic Cow Games.</p>
                         <h6 class="socials mt-3">
 							<center>
