@@ -11,9 +11,44 @@
     <!-- Bootstrap + Pigga main styles -->
 	<link rel="stylesheet" href="assets/css/pigga.css">
 	<link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.ico">
+	
+	<style>
+		
+		.mipopup {
+			display: none; /* El display es none al comenzar, lo cambiamos luego */
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1000;
+			background-color: rgba(0,0,0,0.8);
+		}
+		
+		.mipopupcontent {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			width: 50%;
+		}
+	
+	</style>
+	
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
+	<!--
+	NOTA: Aquí va la movida del pop up
+	-->
+	
+	<a href="javascript:handlePopUpImage('')">
+	<div id="popupwrapper" class="mipopup">
+		<img id="popupimagen" class="mipopupcontent" src="./assets/imgs/album/s0.png">
+	</div>
+	</a>
+	
     <!-- First Navigation -->
     <nav class="navbar nav-first navbar-dark bg-dark">
         <div class="container">
@@ -494,8 +529,25 @@
 					
 						<script>
 							
+							// NOTA: buscar el objeto con id "popupimagen" para el popup de imágenes on click.
+							
+							function handlePopUpImage(imageName) {
+								let wrapper = document.getElementById("popupwrapper");
+								let img = document.getElementById("popupimagen");
+								
+								if(imageName.length <= 0)
+								{
+									wrapper.style.display = "none";
+								}
+								else
+								{
+									img.src = imageName;
+									wrapper.style.display = "block";
+								}
+							}
+							
 							function makeImageDisplay(str = "./assets/imgs/spells.png") {
-								let ans = "<img src=\"" + str + "\" width=\"30%\" class=\"card dra_image_container2\">";
+								let ans = "<div class=\"col-md-4 my-3 my-md-0\"><a class=\"dra_a\" href=\"javascript:handlePopUpImage('" + str + "')\"><img src=\"" + str + "\" width=\"100%\" class=\"card dra_image_container2\"></a></div>";
 								return ans;
 							}
 							
