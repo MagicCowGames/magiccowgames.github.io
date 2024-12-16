@@ -25,14 +25,29 @@
 			background-color: rgba(0,0,0,0.8);
 		}
 		
-		.mipopupcontent {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;
-			width: 50%;
+		@media (aspect-ratio > 1) {
+			/* Styles for landscape-like conditions */
+			.mipopupcontent {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				height: 80%;
+			}
 		}
+		@media (aspect-ratio < 1) {
+			/* Styles for portrait-like conditions */
+			.mipopupcontent {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				text-align: center;
+				width: 80%;
+			}
+		}
+		
 	
 	</style>
 	
